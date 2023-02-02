@@ -70,25 +70,42 @@ function App(): JSX.Element {
       />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
+        style={backgroundStyle}
+      >
+
         <View
+
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <View className="bg-red-500 p-4">
-            <Text style={styles.highlight} className="text-white">App.tsx</Text>
+          }}
+        >
+          <View className="flex justify-between max-h-screen min-h-full">
+
+            <View className="min-h-[20vh] w-full bg-blue-600">
+              <Text></Text>
+            </View>
+            <View>
+              <View className="p-4">
+                <Text style={styles.highlight} className="text-black">Login to mobile app</Text>
+              </View>
+              <View className="p-4 bg-gray-100 m-4 rounded-md mb-2">
+                <Text>Login</Text>
+              </View>
+              <View className="p-4 bg-gray-100 m-4 rounded-md mt-2">
+                <Text>Password</Text>
+              </View>
+              <View className="p-4 bg-blue-600 rounded-md m-4 mt-2 mb-2">
+                <Text className="text-white">Login</Text>
+              </View>
+              <View className="p-4 border border-gray-100 m-4 border-1 rounded-md mt-2 mb-0">
+                <Text className="text-gray-400">Create account</Text>
+              </View>
+              <View className="p-4 m-4 border-1 rounded-md pt-0 pl-0">
+
+                <Text className="text-gray-400 text-xs">Forgot password?</Text>
+              </View>
+            </View>
           </View>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
         </View>
       </ScrollView>
     </SafeAreaView>
